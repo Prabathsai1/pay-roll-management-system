@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home - Payroll</title>
+    <link rel="stylesheet" href="..\payroll-css\payroll.css">
+</head>
+
+<body>
+
+
+       <div class="bar">
+        <img src="..\instruments\pic-1.png" alt="not found" height="70px">
+          <h2 style="color:#F7931E;font-size:40px;font-family: cursive;"><i>welcome to veronica payroll</i> </h2>
+         <div style=" color:white;font-weight:bold">
+          <h4>Company :</h4>
+          <p  style=" color:white;" id="username"></p>
+        </div>
+    </div>
+
+   
+    <div class="main">
+    <li class="menu-items"><a  href="..\index.html">Dashboard</a></li>
+    <li class="menu-items"><a  href=".\payroll.html">Payroll</a></li>
+    <li class="menu-items"><a  href=".\settings.html">Settings</a></li>
+    <li class="menu-items"><a href=".\help.html">Help</a></li>    </div>
+    </div>
+
+    
+    <table border="1" class="table">
+        <thead>
+            <tr>
+                <th>ID No</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Basic Salary</th>
+                <th>HRA (40%)</th>
+                <th>Gross Salary</th>
+                <th>PF (12%)</th>
+                <th>ESI (1.75%)</th>
+                <th>Total Deduction</th>
+                <th>Net Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="employee-table"></tbody>
+    </table>
+
+    <div id="payslip-section" style="display:none; padding:30px;">
+        <h2 style="text-align:center; color:#0288d1;">Salary Payslip</h2>
+
+        <p><b>Employee ID:</b> <span id="ps-id"></span></p>
+        <p><b>Name:</b> <span id="ps-name"></span></p>
+        <p><b>Department:</b> <span id="ps-dept"></span></p>
+
+        <table border="1" style="border-collapse:collapse;line-height:50px;margin-left:130px;;width:800px">
+            <tr>
+                <th>Earnings</th>
+                <th>Amount (₹)</th>
+            </tr>
+            <tr style="text-align:center;">
+                <td>Basic Salary</td>
+                <td id="ps-basic"></td>
+            </tr>
+            <tr style="text-align:center;">
+                <td>HRA (40%)</td>
+                <td id="ps-hra"></td>
+            </tr>
+            <tr>
+                <th>Gross Salary</th>
+                <th id="ps-gross"></th>
+            </tr>
+
+            <tr>
+                <th>Deductions</th>
+                <th>Amount (₹)</th>
+            </tr>
+            <tr>
+                <td style="text-align:center;">PF (12%)</td>
+                <td id="ps-pf" style="text-align:center;"></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">ESI (1.75%)</td>
+                <td id="ps-esi" style="text-align:center;"></td>
+            </tr>
+            <tr>
+                <th>Total Deduction</th>
+                <th id="ps-deduction"></th>
+            </tr>
+
+            <tr style="text-align:center;" style="background:#F9A825;font-weight:bold;">
+                <td>Net Salary</td>
+                <td id="ps-net"></td>
+            </tr>
+        </table>
+
+        <div style="text-align:center;margin-top:20px;">
+            <button class="payslip-btn">Payslip</button>
+        </div>
+    </div>
+
+    <script type="module" src="..\payroll-js\payroll.js"></script>
+</body>
+
+</html>

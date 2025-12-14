@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Logging Out</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #EAF2FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    .message p {
+      margin: 0;
+      font-style: italic;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .message .sub {
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: blue;
+      border-radius: 50%;
+      animation: bounce 0.6s ease-in-out infinite;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.1s; }
+    .dot:nth-child(3) { animation-delay: 0.2s; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(14px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="message">
+      <p>Logging you out securely…</p>
+      <p class="sub">Redirecting, please wait</p>
+    </div>
+
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "./payroll-html/sign-in.html";
+    }, 4000);
+  </script>
+</body>
+</html>

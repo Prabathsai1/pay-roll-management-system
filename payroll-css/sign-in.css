@@ -1,0 +1,170 @@
+body{
+background: linear-gradient(to bottom right, #D4EDF9, #FFF5EB);
+}
+.log-in-form {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo-img {
+  width: 150px;
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }
+}
+
+#log-in {
+  width: 350px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  0% { 
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.head-of-form h1 {
+  margin: 0px;
+  font-size: 28px;
+  text-align: center;
+  color: #0077cc;
+  letter-spacing: 1px;
+}
+
+.head-of-form h5 {
+  margin: 5px 0 20px;
+  text-align: center;
+  color: #444;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+.login label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 4px rgba(0, 120, 212, 0.4);
+}
+
+.login button {
+  width: 100%;
+  padding: 12px;
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login button:hover {
+  background: #005fa3;
+}
+
+h6 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+h6 a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+}
+
+h6 a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+
+  #log-in {
+    width: 90%;
+    padding: 22px;
+  }
+
+  #logo-img {
+    width: 130px;
+  }
+
+  .head-of-form h1 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .log-in-form {
+    padding: 20px 10px;
+  }
+
+  #log-in {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  #logo-img {
+    width: 110px;
+  }
+
+  .head-of-form h1 {
+    font-size: 22px;
+  }
+
+  .head-of-form h5 {
+    font-size: 13px;
+  }
+
+  .login input,
+  .login button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+}
+

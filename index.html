@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home - Payroll</title>
+    <link rel="stylesheet" href=".\payroll-css\home.css">
+</head>
+
+<body>
+       <div class="bar">
+        <img src=".\instruments\pic-1.png" alt="not found" height="70px">
+          <h2 style="color:#F7931E;font-size:40px;font-family: cursive;"><i>welcome to veronica payroll</i> </h2>
+         <div style=" color:white;font-weight:bold">
+          <h4>Company :</h4>
+          <p  style=" color:white;" id="username"></p>
+        </div>
+    </div>
+    <div class="main">
+
+    <li class="menu-items"><a  href=".\index.html">Dashboard</a></li>
+    <li class="menu-items"><a  href=".\pages\payroll.html">Payroll</a></li>
+    <li class="menu-items"><a  href=".\pages\settings.html">Settings</a></li>
+    <li class="menu-items"><a href=".\pages\help.html">Help</a></li>    </div>
+    <div class="welcome">
+      <div class="scroll">
+<h1 style="margin-left:80px">Simple payroll, Powerful possibilities</h1>
+<h1 style="margin-left:100px">Accuracy you trust, Ease you feel</h1>
+<h1 style="margin-left:120px">Work smoother, Pay smoother</h1>
+<h1 style="margin-left:90px">Payroll that always flows your way</h1>
+<h1 style="margin-left:110px">Effortless payroll starts with us</h1>
+
+</div> 
+      <div  id="scrolls">  <h1 style="color:black">Hello! Welcome to your </h1>
+        <h1><span style="color:#E44A33; font-style:italic;  ">Payroll Dashboard</span></h1>
+  </div>
+    </div>
+
+    <div class="dashboard">
+    <div class="dashboard-items">
+
+     
+        <div class="dashboard-details">
+            <img id="imgs2"src=".\instruments\people.png">
+            <p id="totalemp">0</p>
+            <p>Total Employees</p>
+        </div>
+
+        
+
+  
+        <div class="dashboard-details">
+            <img id="imgs2" src=".\instruments\deduction.png" alt="deduction">
+            <p id="totaldeductions">0</p>
+            <p>Total Deductions</p>
+        </div>
+
+    </div>
+</div>
+
+    <div style="background-color: #e0f7fa;">
+    <div class="employee-details">
+        <h2>Employee List</h2>
+        <button id="add-employees">Add Employees</button>
+    </div>
+    <div>
+       <form class="add-employee">
+  <span>
+    <label for="Id">ID NO</label><br>
+    <input id="Id" type="text" name="Id"
+           pattern="^\d{1,8}$" required
+           title="Enter 1 to 8 digits only"
+           placeholder="e.g. 12345678">
+    <small>Must be 1-8 digits</small>
+  </span>
+
+  <span>
+    <label for="name">Full Name</label><br>
+    <input id="name" type="text" name="name"
+           pattern="^[A-Za-z\s]{6,30}$" required
+           title="Enter 6-30 letters only"
+           placeholder="e.g. John Smith">
+    <small>Must be 6-30 letters (spaces allowed)</small>
+  </span>
+
+  <span class="inputmargin">
+    <label for="email">Email</label><br>
+    <input  id="email" type="email" name="email"
+           pattern="^[a-zA-Z0-9._%+-]+@(gmail|yahoo|outlook)\.com$" required
+           title="Enter Gmail, Yahoo, or Outlook email"
+           placeholder="e.g. user@gmail.com">
+    <small>Only Gmail, Yahoo, or Outlook emails allowed</small>
+  </span>
+
+  <span>
+    <label for="Designation">Designation</label><br>
+    <input id="Designation" type="text" name="Designation"
+           pattern="^[A-Za-z\s]{4,20}$" required
+           title="Enter 4-20 letters"
+           placeholder="e.g. Manager">
+    <small>Must be 4-20 letters (spaces allowed)</small>
+  </span>
+
+  <span>
+    <label for="Department">Department</label><br>
+    <input id="Department" type="text" name="Department"
+           pattern="^[A-Za-z\s]{1,15}$" required
+           title="Enter 1-15 letters"
+           placeholder="e.g. HR">
+    <small>Must be 1-15 letters</small>
+  </span>
+
+  <span>
+    <label for="salary">$Salary</label><br>
+    <input class="inputpadding" id="salary" type="number" name="salary"
+           min="1000" max="9999999" required
+           title="Enter numeric salary"
+           placeholder="e.g. 50000">
+    <small>Enter numeric salary only</small>
+  </span>
+
+  <span>
+    <label for="Position">Position</label><br>
+    <input id="Position" type="text" name="Position"
+           pattern="^[A-Za-z\s]{2,20}$" required
+           title="Enter 2-20 letters"
+           placeholder="e.g. Developer">
+    <small>Must be 2-20 letters</small>
+  </span>
+
+  <span>
+    <label for="net">Net Salary</label><br>
+    <input  class="inputpadding" id="net" type="number" name="net"
+           min="1000" max="9999999" required
+           title="Enter numeric net salary"
+           placeholder="e.g. 45000">
+    <small>Enter numeric net salary only</small>
+  </span>
+
+  <span>
+    <label for="Account">Account number</label><br>
+    <input id="Account" type="text" name="Account"
+           pattern="^\d{11,16}$" required
+           title="Enter 11-16 digit account number"
+           placeholder="e.g. 123456789012">
+    <small>Must be 11-16 digits</small>
+  </span>
+
+  <span style="margin-left:3px">
+    <label for="IFSC">Bank IFSC</label><br>
+    <input id="IFSC" type="text" name="IFSC"
+           pattern="^[A-Z]{4}0[A-Z0-9]{6}$" required
+           title="Enter valid IFSC code"
+           placeholder="e.g. HDFC0001234">
+    <small>Format: 4 letters + 0 + 6 alphanumeric</small>
+  </span>
+
+  <button id="submit" type="submit">Submit</button>
+  <button id="cancel" type="button">Cancel</button>
+</form>
+    </div>
+   <table border="1" class="table">
+    <thead>
+        <tr>
+            <th>ID NO</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>Basic Salary</th>
+            <th>Position</th>
+            <th>Net Salary</th>
+            <th>Account No</th>
+            <th>IFSC</th>
+            <th>action</th>
+        </tr>
+    </thead>
+
+    <tbody id="employee-table"></tbody>
+</table>
+
+    </div>
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Payroll System</h3>
+            <p>Reliable and secure payroll management for your organization.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@payroll.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: Hyderabad, India</p>
+        </div>
+      <div>
+    <h3>Follow us on</h3>
+      <div style="display:flex;gap:10px;cursor:pointer">
+           <a href="https://www.instagram.com/" target="_self"> <img class="social-media-accounts" height="25px" src=".\instruments\instagram.png" alt="instagram"></a>
+            <a href="https://x.com/" target="_self"><img height="25px" class="social-media-accounts" src=".\instruments\twitter.png" alt="twitter"></a>
+            <a href="https://www.facebook.com/" target="_self"><img height="25px" class="social-media-accounts" src=".\instruments\facebook.png" alt="facebook"></a>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Payroll System. All rights reserved.</p>
+    </div>
+</footer>
+
+<script type="module" src=".\payroll-js\home.js"></script>
+</body>
+
+</html

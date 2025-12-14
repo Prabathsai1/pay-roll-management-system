@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+
+.bar {
+    background-color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.bar div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+#username {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+  margin: 0;
+}
+.bar {
+  padding: 10px 20px;
+}
+.bar {
+  height: 80px;
+}
+.main {
+    display: flex;
+    height: 60px;
+    padding-top: 10px;
+    font-weight: 600;
+    justify-content: center;
+    gap: 50px;
+    font-size: 17px;
+}
+
+.menu-items {
+    list-style: none;
+}
+
+.menu-items a {
+     display: inline-block; 
+    color: black !important;        
+    text-decoration: none !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.main .menu-items:nth-child(2) a {
+    color: #E44A33 !important;
+    transform: translateY(-2px);
+    position: relative;
+}
+
+.menu-items a {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-items a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #E44A33;
+    transition: width 0.3s ease;
+}
+
+.menu-items a:hover::after {
+    width: 100%;
+}
+
+.main .menu-items:nth-child(2) a::after {
+    width: 100%;     
+}
+
+
+.table {
+     width: 96%;
+    margin: 40px auto 0 auto; 
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+    table-layout: fixed;
+    border:10px solid white
+}
+.table tr:hover {
+    background-color: rgb(148, 226, 248);
+}
+.table th {
+    background-color: #0288d1;
+    color: white;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1faff;
+}
+
+.payslip-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+
+.payslip-btn:hover {
+    background-color: #d32c24;
+}
+td {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+
+
+
+@media (max-width: 1024px) {
+
+  .main {
+    gap: 30px;
+    font-size: 16px;
+  }
+
+  .table {
+    width: 98%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  
+  .bar {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .main {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+  }
+
+  .table tr:hover {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .menu-items a {
+    font-size: 15px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .payslip-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
