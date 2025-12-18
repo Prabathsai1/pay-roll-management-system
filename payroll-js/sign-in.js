@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import { getAuth,   sendPasswordResetEmail,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-database.js";
 
   const firebaseConfig = {
@@ -41,3 +41,15 @@ document.querySelector(".login").addEventListener("submit", (e) => {
       alert(err.message);    
     });
 });
+
+document.querySelector("#forgot-password").addEventListener("click",(e)=>{
+  const emailInputs =document.getElementById("login-email").value.trim();
+  e.preventDefault();
+  sendPasswordResetEmail(auth,emailInputs )
+    .then(()=>{
+      alert("email sent")
+    })
+    .catch((error)=>{
+      alert(error.code)
+    })
+})
